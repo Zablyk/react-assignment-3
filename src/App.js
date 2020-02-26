@@ -12,15 +12,17 @@ class App extends Component {
       <div className="App">
         <header>
           <nav>
-            <ul>
-              <li><NavLink to="/users">Users</ NavLink></li>
+            <ul style={{listStyle: 'none', margin: 'auto', padding: '0'}}>
+              <li style={{margin: '10px', display: 'inline-block'}}><NavLink to="/users">Users</ NavLink></li>
               <li><NavLink to="/courses">Courses</ NavLink></li>
             </ul>
           </nav>
         </header>
         <Switch>
-            <Route path="/users" component={Users} />
-            <Route path="/courses" component={Courses} />
+            <Route path="/users"
+                   component={Users} />
+            <Route path="/courses"
+                   component={Courses} />
         </Switch>
         <ol style={{textAlign: 'left'}}>
           <li>Add Routes to load "Users" and "Courses" on different pages (by entering a URL, without Links)</li>
