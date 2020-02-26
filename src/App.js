@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 
 import Courses from './containers/Courses/Courses';
 import Users from './containers/Users/Users';
-import { Route, NavLink, Switch, BrowserRouter } from 'react-router-dom';
+import { Route, NavLink, Switch } from 'react-router-dom';
 
 
 class App extends Component {
   render () {
     return (
-      <BrowserRouter>
       <div className="App">
         <header>
           <nav>
@@ -35,7 +34,6 @@ class App extends Component {
           <li>Redirect requests to /all-courses to /courses (=> Your "Courses" page)</li>
         </ol>
       </div>
-      </BrowserRouter>
     );
   }
 }
