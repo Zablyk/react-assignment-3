@@ -4,7 +4,7 @@ import Courses from './containers/Courses/Courses';
 import Course from './containers/Course/Course';
 import Users from './containers/Users/Users';
 import NoMatch from './components/NoMatch/NoMatch';
-import { Route, NavLink, Switch } from 'react-router-dom';
+import { Route, NavLink, Switch, Redirect } from 'react-router-dom';
 import noMAtch from './components/NoMatch/NoMatch';
 
 
@@ -33,6 +33,7 @@ class App extends Component {
           <Route path="/users" component={Users} />
           {/* <Route path="/courses/:courseId" component={Course} /> */}
           <Route path="/courses" component={Courses} />
+          <Redirect from="/all-courses" to="/courses" />
           <Route component={NoMatch}/>
         </Switch>
       </div>
